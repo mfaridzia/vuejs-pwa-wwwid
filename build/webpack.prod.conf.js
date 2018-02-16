@@ -105,7 +105,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ['dist/**/*.{js,html,css}'],
       runtimeCaching: [
         {
-          urlPattern: /^http:\/\/res\.cloudinary\.com\//,
+          urlPattern: /^https:\/\/res\.cloudinary\.com\//,
           handler: 'cacheFirst'
         }
       ],
