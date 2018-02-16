@@ -1,0 +1,53 @@
+[
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover1_qy3ovk.png",
+    "title": "ToArray",
+    "description": "An array is a data structure that contains a group of elements. Typically these elements are all of the same data type, such as an integer or string. Arrays are commonly used in computer programs to organize data so that a related set of values can be easily sorted or searched."
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover2_e50jkt.jpg",
+    "title": "Coding For Dummies",
+    "description": "Coding For Dummies is the perfect place to start! Explore the basics of HTML, CSS, JavaScript, Ruby, and Python and find out how to build great web applications. Once you're up and running, you can continue to refine and practice your skills online"
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover3_tyyyre.jpg",
+    "title": "Harry porter and the sorcerer's stone",
+    "description": "For 10 years, Harry lives in the cupboard under the stairs and is subjected to cruel mistreatment by Aunt Petunia, Uncle Vernon and their son Dudley. On his 11th birthday, Harry receives a letter inviting him to study magic at the Hogwarts School of Witchcraft and Wizardry."
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover4_ztop7m.jpg",
+    "title": "Mastering STM 32",
+    "description": "With more than 600 microcontrollers, STM32 is probably the most complete ARM Cortex-M platform on the market. This book aims to be the first guide around that introduces the reader to this exciting MCU portfolio from ST Microelectronics and its official CubeHAL."
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover5_hmb8k1.jpg",
+    "title": "Steal like an artist",
+    "description": "You don’t need to be a genius, you just need to be yourself. That’s the message from Austin Kleon, a young writer and artist who knows that creativity is everywhere, creativity is for everyone."
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover6_difm9j.jpg",
+    "title": "The museum of Innocence",
+    "description": "The Museum of Innocence (Turkish: Masumiyet Müzesi) is a novel by Orhan Pamuk, Nobel-laureate Turkish novelist published on August 29, 2008. The book, set in Istanbul between 1975 and 1984, is an account of the love story between the wealthy businessman Kemal and a poorer distant relative of his, Füsun."
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover7_x3vqgt.jpg",
+    "title": "Web programming",
+    "description": "In 2009 the Internet celebrated its 40th anniversary, and the World Wide Web had been in existence for over 15 years. The concepts of computer networks and hypertext on which these technologies rely are only a little older."
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover8_k9yriy.jpg",
+    "title": "Programming from ground up",
+    "description": "I've read a few chapters of this and have found it be well written and a great introduction to assembly programming. It was written for 32-bit but so far everything works just fine on my 64 bit linux system"
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714087/cover10_j8hdif.jpg",
+    "title": "Android Programming",
+    "description": "The Android operating system can be divided into the four areas as depicted in the following graphic. An Android application developer typically works with the two layers on top to create new Android applications."
+  },
+  {
+    "imageUrl": "http://res.cloudinary.com/yemiwebby-com-ng/image/upload/v1507714088/cover9_v7zpni.jpg",
+    "title": "Software Developer Guide",
+    "description": "The Android operating system can be divided into the four areas as depicted in the following graphic. An Android application developer typically works with the two layers on top to create new Android applications."
+  }
+
+]
