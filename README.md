@@ -1,21 +1,20 @@
-# vue-pwa
+# WWWID Challenge
 
-> A Vue.js project
+Vue PWA for WWWID RSS Feed
 
-## Build Setup
+Aplikasi ini dibuat untuk mengikuti [WWWID Challenge](https://medium.com/wwwid/tantangan-web-developer-untuk-membuat-aplikasi-web-bisa-digunakan-kurang-dari-5-detik-70bb7431741d).
 
-``` bash
-# install dependencies
-npm install
+## Link demo: 
+[https://vue-pwa-144fe.firebaseapp.com](https://vue-pwa-144fe.firebaseapp.com)
 
-# serve with hot reload at localhost:8080
-npm run dev
+## API
+[https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/wwwid](https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/wwwid)
 
-# build for production with minification
-npm run build
+## Teknologi Stack yang digunakan:
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+- Vue.js (Library)
+- Vuex (State Management)
+- Vue Router (Router)
+- Webpack (Bundler)
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Copyright © 2018 Built with ❤️ for 🇮🇩 by Muhammad Farid Zia
