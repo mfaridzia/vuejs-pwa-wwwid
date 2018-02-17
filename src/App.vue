@@ -1,34 +1,33 @@
 <template>
   <div id="app">
     <header>
-      <span>Simple PWA App</span>
+      <ul>
+        <li>
+          <router-link to="/" class="brand"> WWWID - MEDIUM </router-link>
+        </li>
+        <li>
+          <router-link to="/"> Home </router-link>
+        </li>
+        <li>
+          <router-link to="/about"> About </router-link>
+        </li>
+      </ul>
     </header>
     <main>
       <div class="wrapper">
-        <div class="books">
-          <book v-for="list in lists" :key="list.imageUrl" :list="list"></book>
-        </div>
+        <router-view></router-view>
       </div>
     </main>
   </div>
 </template>
 
 <script>
-import data from './db.json'
-import Book from './components/Book'
 
 export default {
   name: 'app',
   data() {
     return {
-      lists: []
     }
-  },
-  created() {
-    this.lists = data
-  },
-  components: {
-    Book
   }
 }
 </script>
@@ -54,51 +53,29 @@ header {
   margin: 0;
   height: 56px;
   padding: 0 16px 0 24px;
-  background-color: #35495E;
+  background-color: #3498db;
   color: #ffffff;
+  margin-top: -17px;
 }
 
-header span {
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  color: #fff;
   display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
+  padding: 20px;
+  font-size: 14px;
 }
-.books {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1em;
-  margin:0px 10px;
+a:hover {
+  color: #ecf0f1;
 }
-
-/*RESPONSIVE*/
-@media only screen and (min-width: 350px) {
-  .books {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media only screen and (min-width: 500px) {
-  .books {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (min-width: 700px) {
-  .books {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media only screen and (min-width: 900px) {
-  .books {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media only screen and (min-width: 1100px) {
-  .books {
-    grid-template-columns: repeat(5, 1fr);
-  }
+.brand {
+  font-weight: bold;
+  color: #ecf0f1;
 }
 </style>
