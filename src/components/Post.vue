@@ -2,10 +2,10 @@
 	<div class="wrapper-book">
 		<div class="books" v-for="post in posts" :key="post.thumbnail" @click="detailArticle(post)">
 			<img :src="post.thumbnail" :alt="post.title"> <br/>
-            <span> Ditulis oleh: {{ post.author }} pada {{ post.pubDate }} </span>
+            <span> {{ post.author }} {{ post.pubDate }} </span>
 			<h4> {{ post.title }} </h4>
             <p class="content"> 
-                {{ post.description.replace(/(<([^>]+)>)/gi,"").substr(1, 115) }} ...... 
+                {{ post.description | regexcontent }} ...... 
             </p>
 		</div>
 	</div>
@@ -19,6 +19,13 @@ export default {
         return {
             posts: [],
             detailPost: []
+        }
+    },
+    filters: {
+        regexcontent: function (value) {
+            if (!value) return ''
+            value = value.replace(/(<([^>]+)>)/ig,"").substr(1, 115)
+            return value
         }
     },
     created() {
@@ -50,6 +57,7 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
     margin: 15px auto;
+    cursor: pointer;
 }
 .books {
     background: #f2f2f2;

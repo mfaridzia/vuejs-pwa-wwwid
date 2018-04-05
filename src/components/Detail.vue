@@ -2,46 +2,53 @@
 	<div class="wrapper-book">
 		<div class="books">
 			<img :src="article.thumbnail" :alt="article.title"> <br/>
-            <span> Ditulis oleh: {{ article.author }} pada {{ article.pubDate }} </span>
+            <span> {{ article.author }} at {{ article.pubDate }} </span>
 			<h2> {{ article.title }} </h2>
             <p class="content"> 
-                {{ article.description.replace(/(<([^>]+)>)/gi,"") }} 
+                {{ article.description | regexcontent }} 
             </p>
-            <button @click="back"> < Kembali ke halam utama </button>
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
+    filters: {
+        regexcontent: function (value) {
+            if (!value) return ''
+            value = value.replace(/(<([^>]+)>)/ig,"")
+            return value
+        }
+    },
     computed: {
         article () {
             return this.$store.state.article
         }
-    },
+    }
+    /*
     methods: {
         back() {
             this.$store.commit('setArticle', {})
             this.$router.replace({ path: '/' })
         }
-    }
+    } 
+    */
 }
 </script>
 
 <style scoped>
 .wrapper-book {
-    width: 75%;
+    width: 55%;
     margin: 0 auto;
 }
 .books {
-    background: #f2f2f2;
+    background: #f1f1f1;
     color: #000;
-	-webkit-perspective: 1000;
-	-webkit-backface-visibility: hidden;
 	transition: all 100ms ease-in-out;
 	transition: all 100ms ease-in-out;
     padding: 5px;
     height: auto;
+    margin-bottom: 20px;
 
 }
 .books:hover {
@@ -60,7 +67,7 @@ p {
     font-size: 17px;
 }
 span {
-    font-size: 14px;
+    font-size: 12px;
     padding: 0px 3px;
 }
 .content {
@@ -69,15 +76,11 @@ span {
     line-height: 30px;
     text-align: justify;
 }
-button {
-    border: 0px;
-    background: #3498db;
-    padding: 15px;
-    color: #fff;
-    font-weight: bold;
-    margin-bottom: 20px;
+.back {
+    text-align: center;
+    font-size: 17px;
     cursor: pointer;
-    border-radius: 5px;
+    color: #3498db;
 }
 
 /*RESPONSIVE*/

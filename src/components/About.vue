@@ -1,10 +1,11 @@
 <template>
 	<div class="container">
         <p> 
-            <h2> Vue PWA for WWWID RSS Feed By @mfaridzia </h2>
+            <h2> vuejs pwa for wwwid by @mfaridzia </h2>
             <p> Source Code : <p>
-            <a href="https://github.com/mfaridzia/vuejs-pwa-wwwid"> https://github.com/mfaridzia/vuejs-pwa-wwwid </a> </p>
+            <a href="https://github.com/mfaridzia/vuejs-pwa-wwwid"> https://github.com/mfaridzia/vuejs-pwa-wwwid </a> 
         </p>
+
     </div>
 </template>
 
