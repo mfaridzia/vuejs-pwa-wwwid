@@ -1,18 +1,5 @@
 <template>
   <div id="app">
-    <header>
-      <ul>
-        <li>
-          <router-link to="/" class="brand"> WWWID - MEDIUM </router-link>
-        </li>
-        <li>
-          <router-link to="/"> Home </router-link>
-        </li>
-        <li>
-          <router-link to="/about"> About </router-link>
-        </li>
-      </ul>
-    </header>
     <main>
       <div class="wrapper">
         <router-view></router-view>
@@ -22,12 +9,14 @@
 </template>
 
 <script>
-
 export default {
   name: 'app',
   data() {
     return {
     }
+  },
+  beforeMount() {
+    this.$store.dispatch('fetchArticle')
   }
 }
 </script>
@@ -35,31 +24,36 @@ export default {
 <style>
 body {
   margin: 0;
+  background: #efeded;
 }
-
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  background: #efeded;
 }
-
 main {
   text-align: center;
   margin-top: 40px;
 }
 
 header {
+  position: fixed;
+  top:0;
+  width: 100%;
   margin: 0;
   height: 56px;
   padding: 0 16px 0 24px;
-  background-color: #3498db;
+  background-color: #1f293d;
   color: #ffffff;
-  margin-top: -17px;
+  margin-top: 0px;
+  text-align: center;
 }
 
 ul {
   list-style: none;
+  margin-left: -350px;
 }
 ul li {
   display: inline-block;
@@ -68,7 +62,7 @@ a {
   text-decoration: none;
   color: #fff;
   display: block;
-  padding: 20px;
+  padding: 5px 20px;
   font-size: 14px;
 }
 a:hover {

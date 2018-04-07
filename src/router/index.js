@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Post from '@/components/Post'
-import About from '@/components/About'
-import Detail from '@/components/Detail'
+const Post   = () => import(/* webpackChunkName: "post" */ '@/components/Post.vue')
+const About  = () => import(/* webpackChunkName: "about" */ '@/components/About.vue')
+const Detail = () => import(/* webpackChunkName: "detail" */ '@/components/Detail.vue')
+const Category = () => import(/* webpackChunkName: "category" */ '@/components/Category.vue')
 
 Vue.use(Router)
 
@@ -19,9 +20,20 @@ export default new Router({
       component: About
     },
     {
-      path: '/detail',
+      path: '/post/article-detail',
       name: 'Detail',
       component: Detail
+    },
+    {
+      path: '/category/post/article-detail',
+      name: 'Detail',
+      component: Detail
+    },
+    {
+      path: '/category/:slug',
+      name: 'category',
+      component: Category,
+      props: true
     }
   ]
 })
