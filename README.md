@@ -16,5 +16,6 @@ Aplikasi ini dibuat untuk mengikuti [WWWID Challenge](https://medium.com/wwwid/t
 - Vuex (State Management)
 - Vue Router (Router)
 - Webpack (Bundler)
+- Vue-lazyload (Lazy Load Image)
 
 Copyright © 2018 Built with ❤️ for 🇮🇩 by Muhammad Farid Zia
