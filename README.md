@@ -7,6 +7,9 @@ Aplikasi ini dibuat untuk mengikuti [WWWID Challenge](https://medium.com/wwwid/t
 ## Link demo: 
 [https://vue-pwa-144fe.firebaseapp.com](https://vue-pwa-144fe.firebaseapp.com)
 
+## Medium Article
+[https://medium.com/@MFaridZia/sedikit-catatan-saat-membuat-aplikasi-web-pwa-untuk-wwwidchallenge-47d8fbdd6f61](https://medium.com/@MFaridZia/sedikit-catatan-saat-membuat-aplikasi-web-pwa-untuk-wwwidchallenge-47d8fbdd6f61)
+
 ## API
 [https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/wwwid](https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/wwwid)
 
@@ -18,4 +21,4 @@ Aplikasi ini dibuat untuk mengikuti [WWWID Challenge](https://medium.com/wwwid/t
 - Webpack (Bundler)
 - Vue-lazyload (Lazy Load Image)
 
-Copyright © 2018 Built with ❤️ for 🇮🇩 by Muhammad Farid Zia
+Built with Vue.js by Muhammad Farid Zia
