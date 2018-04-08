@@ -21,4 +21,4 @@ Aplikasi ini dibuat untuk mengikuti [WWWID Challenge](https://medium.com/wwwid/t
 - Webpack (Bundler)
 - Vue-lazyload (Lazy Load Image)
 
-Built with Vue.js by Muhammad Farid Zia
+Copyright © 2018 Built with Vue.js by Muhammad Farid Zia
