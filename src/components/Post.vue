@@ -48,7 +48,6 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      // detailPost: []
     }
   },
   filters: {
@@ -138,19 +137,6 @@ export default {
 .cat-a {
   display: inline-block;
 }
-
-
-/*RESPONSIVE*/
-/* /* @media only screen and (min-width: 350px) {
-  .wrapper-book {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media only screen and (min-width: 500px) {
-  .wrapper-book {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
 @media only screen and (max-width: 700px) {
   .wrapper-book {
     grid-template-columns: repeat(1, 1fr);
@@ -168,7 +154,6 @@ export default {
     left: 50px;
   }
 }
-
 @media only screen and (max-width: 1200px) {
   .category-list {
     padding: 5px;
@@ -179,10 +164,4 @@ export default {
     left: 50px;
   }
 }
-
-/* @media only screen and (min-width: 900px) {
-  .wrapper-book {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}  */
 </style>

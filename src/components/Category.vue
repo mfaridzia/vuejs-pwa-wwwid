@@ -84,9 +84,6 @@ strong {
 .title {
   cursor: pointer;
 }
-/* .books:hover {
-  transform: translateY(-0.5em);
-} */
 h2 {
   padding: 0px 15px;
   line-height: 30px;

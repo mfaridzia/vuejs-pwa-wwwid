@@ -10,9 +10,9 @@ Vue.use(VueLazyload)
 
 // or with options
 Vue.use(VueLazyload, {
-  preLoad: 1.3,
-  error: 'dist/error.png',
-  loading: 'dist/loading.gif',
+  observer: true,
+  preLoad: 1,
+  loading: require('./assets/overlay.png'),
   attempt: 1
 })
 

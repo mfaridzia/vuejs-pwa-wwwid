@@ -87,11 +87,6 @@ h2 {
 	padding: 0px 15px;
 	line-height: 30px;
 }
-/* img {
-	display: block;
-	width: 100%;
-	height: 300px;
-} */
 p {
 	font-size: 17px;
 }
@@ -103,7 +98,6 @@ span {
 	font-size: 14px;
 	padding: 10px;
 	line-height: 30px;
-	/* text-align: justify; */
 	text-align: left;
 	color: black;
 }
@@ -117,11 +111,6 @@ ul {
   list-style: none;
   margin-left: -550px;
 }
-/* img {
-	width: 100px;
-	height: 200px;
-} */
-
 /*RESPONSIVE*/
 @media only screen and (max-width: 750px) {
 	.wrapper-book {
