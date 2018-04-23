@@ -39,15 +39,21 @@ p {
 }
 ul {
   list-style: none;
-  margin-left: -480px;
+  margin-left: -270px;
 }
 
 @media only screen and (max-width: 750px) {
-.container {
-    width: 60%;
-}
-h2 {
-    font-size: 16px;
-}
+  .container {
+      width: 100%;
+  }
+  h2 {
+      font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .brand {
+    display: none;
+  }
 }
 </style>

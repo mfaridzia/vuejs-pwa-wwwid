@@ -53,7 +53,7 @@ header {
 
 ul {
   list-style: none;
-  margin-left: -350px;
+  margin-left: -270px;
 }
 ul li {
   display: inline-block;

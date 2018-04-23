@@ -1,6 +1,6 @@
 {
-  "name": "vue-pwa",
-  "short_name": "vue-pwa",
+  "name": "wwwid-medium",
+  "short_name": "wwwid-medium",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",

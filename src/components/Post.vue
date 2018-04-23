@@ -139,11 +139,13 @@ export default {
 }
 @media only screen and (max-width: 700px) {
   .wrapper-book {
+    width: 80%;
     grid-template-columns: repeat(1, 1fr);
   }
   .img {
     width: 90%;
-    height: 120px;
+    height: 150px;
+    margin: 30px auto;
   }
   .category-list {
     padding: 5px;
@@ -151,7 +153,10 @@ export default {
     margin: 5px;
   }
   .built-vuejs {
-    left: 50px;
+    display: none;
+  }
+  .brand {
+    display: none;
   }
 }
 @media only screen and (max-width: 1200px) {

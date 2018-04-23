@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 .wrapper-book {
-  width: 55%;
+  width: 40%;
   margin: 90px auto;
 }
 .books {
@@ -121,6 +121,9 @@ span {
 .books {
     padding: 5px;
     height: auto;
+  }
+  .brand {
+    display: none;
   }
 }
 
