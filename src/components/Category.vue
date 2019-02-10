@@ -16,11 +16,10 @@
     <div class="wrapper-book">
       <h4> Articles in category <strong> {{ $route.params.slug }} </strong> </h4>
       <div class="books" v-for="(item, index) in items" :key="index">
-        <img v-lazy="item.thumbnail" alt="item.title">
-        <h3 @click="detailArticle(item)" class="title"> {{ item.title }} </h3>
-        <p class="a-pubdate"> by {{ item.author }} at {{ item.pubDate }} </p>
-        <p v-if="item.guid === 'https://medium.com/p/c1e27e7e2742'"> {{ item.description | regcontentunik }} ... </p>
-        <p v-else> {{ item.description | regcontent }} ... </p>
+        <h1 @click="detailArticle(item)" class="title"> {{ item.title }} </h1>
+         <img v-lazy="item.thumbnail" alt="item.title">
+        <p v-if="item.guid === 'https://medium.com/p/c1e27e7e2742'"> {{ item.description | regexContentunik }} ... </p>
+        <p v-else> {{ item.description | regexContent }} ... </p>
       </div>
 	  </div>
   </div>
@@ -34,14 +33,9 @@ export default {
     }
   },
   filters: {
-    regcontent: function (value) {
+    regexContent: function (value) {
       if (!value) return ''
-        value = value.replace(/(<([^>]+)>)/ig,"").substr(1, 110)
-      return value
-    },
-    regcontentunik: function (value) {
-      if (!value) return ''
-        value = value.replace(/(<([^>]+)>)/ig,"").substr(80, 56)
+        value = value.replace(/(<([^>]+)>)/ig,"").substr(1, 200)
       return value
     }
   },
@@ -55,8 +49,43 @@ export default {
 </script>
 
 <style scoped>
+header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  margin: 0;
+  height: 56px;
+  padding: 0 16px 0 24px;
+  background-color: #1f293d;
+  color: #ffffff;
+  margin-top: 0px;
+  text-align: left;
+}
+
+header ul {
+  list-style: none;
+  margin-left: 125px;
+}
+header ul li {
+  display: inline-block;
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 5px 20px;
+  font-size: 14px;
+}
+header a:hover {
+  color: #ecf0f1;
+}
+.brand {
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
 .wrapper-book {
-  width: 40%;
+  width: 70%;
   margin: 90px auto;
 }
 .books {
@@ -64,12 +93,14 @@ export default {
   color: #000;
 	transition: all 100ms ease-in-out;
 	transition: all 100ms ease-in-out;
-  padding: 5px;
+  padding: 20px 50px;
   height: auto;
   margin-bottom: 20px;
 }
 .a-pubdate {
   font-size: 12px;
+  text-align: left;
+  margin-left: 50px;
 }
 h4 {
   text-align: left;
@@ -90,8 +121,9 @@ h2 {
 }
 img {
 	display: block;
-	width: 100%;
+	width: 70%;
   height: 300px;
+  margin: 0 auto;
 }
 p {
   font-size: 17px;

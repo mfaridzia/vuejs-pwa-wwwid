@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 import VueLazyload from 'vue-lazyload'
-
 Vue.use(VueLazyload)
 
 // or with options

@@ -11,9 +11,9 @@
         <li>
           <router-link to="/about"> About </router-link>
         </li>
-        <li>
+        <!-- <li>
           <router-link to="/" class="built-vuejs"> Built with Vue.js </router-link>
-        </li>
+        </li> -->
       </ul>
     </header>
 
@@ -24,17 +24,17 @@
       <div class="content-article">
         <div v-if="post.guid === 'https://medium.com/p/c1e27e7e2742'">
           <p class="title" @click="detailArticle(post)"> <strong> {{ post.title }} </strong> </p>
-          <p class="desc"> {{ post.description | regcontentunik }} .. </p>
-          <p class="author-pubdate"> by <u> {{ post.author }} </u> at <u> {{ post.pubDate }} </u> </p>
+          <p class="desc"> {{ post.description | regexContentUnik }} .. </p>
+          <p class="author-pubdate"> <u> {{ post.author }} </u> at <u> {{ post.pubDate }} </u> </p>
         </div>
         <div v-else>
           <p class="title" @click="detailArticle(post)"> <strong> {{ post.title }} </strong> </p>
-          <p class="desc"> {{ post.description | regcontent }} .. </p>
-          <p class="author-pubdate"> by <u> {{ post.author }} </u> at <u> {{ post.pubDate }} </u> </p>
+          <p class="desc"> {{ post.description | regexContent }} .. </p>
+          <p class="author-pubdate"> <u> {{ post.author }} </u> at <u> {{ post.pubDate }} </u> </p>
         </div>
         <div class="category">
           <span v-for="(cat, index) in post.categories" :key="index" class="category-list">
-            <router-link :to="`/category/${cat}`" class="cat-a"> {{ cat }} </router-link>
+            <router-link :to="`/category/${cat}`" class="cat-a"> # {{ cat }} </router-link>
           </span>
         </div>
       </div>
@@ -51,16 +51,19 @@ export default {
     }
   },
   filters: {
-    regcontent: function (value) {
+    regexContent: function (value) {
       if (!value) return ''
-        value = value.replace(/(<([^>]+)>)/ig,"").substr(1, 50)
+        value = value.replace(/(<([^>]+)>)/ig,"").substr(1, 150)
       return value
     },
-    regcontentunik: function (value) {
+    regexContentUnik: function (value) {
       if (!value) return ''
         value = value.replace(/(<([^>]+)>)/ig,"").substr(80, 56)
       return value
     }
+  },
+  mounted() {
+    this.$store.dispatch('fetchArticle')
   },
   computed: {
     posts () {
@@ -77,11 +80,50 @@ export default {
 </script>
 
 <style scoped>
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  margin: 0;
+  height: 56px;
+  padding: 0 16px 0 24px;
+  background-color: #1f293d;
+  color: #ffffff;
+  margin-top: 0px;
+  text-align: left;
+}
+
+header ul {
+  list-style: none;
+  margin-left: 125px;
+}
+header ul li {
+  display: inline-block;
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 5px 20px;
+  font-size: 14px;
+}
+header a:hover {
+  color: #ecf0f1;
+}
+.brand {
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
 #post {
   margin-top: 85px;
 }
 .wrapper-book {
-  width: 50%;
+  width: 70%;
 	display: grid;
   grid-template-columns: 150px 1fr;
   grid-gap: 1em;
@@ -95,7 +137,7 @@ export default {
 }
 .built-vuejs {
   position: relative;
-  left: 240px;
+  left: 0px;
   background: #fff;
   color: #000;
   padding: 5px;
@@ -133,6 +175,11 @@ export default {
   background: #1f293d;
   margin-left: 10px;
   color: #fff;
+}
+.category-list a {
+  color: #fff;
+  text-decoration: none;
+  background: #1f293d;
 }
 .cat-a {
   display: inline-block;
