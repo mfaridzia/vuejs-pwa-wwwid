@@ -8,7 +8,6 @@ const Category = () => import(/* webpackChunkName: "category" */ '@/components/C
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
